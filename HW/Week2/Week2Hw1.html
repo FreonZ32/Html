@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: aliceblue;
+    }
+    ol
+    {
+        counter-reset: myCounter;
+        background-color: #ED9EAE;
+        margin: 0.5em;
+        padding: 0.4em;
+    }
+    li
+    {
+        list-style: none;
+        margin: 0.5em;
+        padding: 0.4em;
+        background-color:#C66376;
+    }
+    li span
+    {
+        background-color: #9E354A;
+        padding-block:inherit;
+        padding-inline: 0.8em;
+    }
+    li::before
+    {
+        color: aliceblue;
+        background-color:#C66376;
+        content: counter(myCounter)". ";
+        counter-increment: myCounter;
+        padding-inline: 0.4em;
+
+    }
+</style>
+<body class="main">
+    <ol>
+        <li><span>Apple</span></li>
+        <li><span>Orange</span></li>
+        <li><span>Pineapple</span></li>
+        <li><span>Pear</span></li>
+        <li><span>Cherry</span></li>
+    </ol>
+</body>
+</html>
